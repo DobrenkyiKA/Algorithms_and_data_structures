@@ -1,3 +1,4 @@
+
 ##Homework №1
 Написать LinkedListPrototype с методами addFirst, removeFirst, size, head
 ##Homework №2
