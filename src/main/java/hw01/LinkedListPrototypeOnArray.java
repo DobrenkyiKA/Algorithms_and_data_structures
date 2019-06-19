@@ -1,4 +1,4 @@
-package hw01.linkedListPrototype;
+package hw01;
 
 public class LinkedListPrototypeOnArray<T>  {
 

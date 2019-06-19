@@ -1,4 +1,4 @@
-package hw01.linkedListPrototype;
+package hw01;
 
 import org.junit.jupiter.api.Test;
 

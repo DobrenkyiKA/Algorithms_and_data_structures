@@ -1,4 +1,4 @@
-package hw01.linkedListPrototype;
+package hw01;
 
 public class LinkedListPrototypeOnNodes<T> {
     private Node firstNode;
@@ -7,7 +7,7 @@ public class LinkedListPrototypeOnNodes<T> {
 
     public void addFirst(T element) {
         size++;
-        Node node = new Node();
+        Node node = new Node<T>();
         node.currentElement = element;
         if (firstNode == null) {
             firstNode = node;
