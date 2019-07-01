@@ -102,5 +102,21 @@ class LinkedListPrototypeOnNodesWithReturnMaxMethodTest {
         linkedListPrototypeOnNodesWithReturnMaxMethod1.addFirst("432432fdsfs");
         linkedListPrototypeOnNodesWithReturnMaxMethod1.addFirst("");
         assertEquals("d", linkedListPrototypeOnNodesWithReturnMaxMethod1.returnMax());
+
+        LinkedListPrototypeOnNodesWithReturnMaxMethod<Integer> linkedListPrototypeOnNodesWithReturnMaxMethod2 = new LinkedListPrototypeOnNodesWithReturnMaxMethod<>();
+        linkedListPrototypeOnNodesWithReturnMaxMethod2.addFirst(1);
+        linkedListPrototypeOnNodesWithReturnMaxMethod2.addFirst(10);
+        linkedListPrototypeOnNodesWithReturnMaxMethod2.addFirst(100);
+        linkedListPrototypeOnNodesWithReturnMaxMethod2.addFirst(100);
+        linkedListPrototypeOnNodesWithReturnMaxMethod2.addFirst(10);
+        linkedListPrototypeOnNodesWithReturnMaxMethod2.addFirst(1);
+        linkedListPrototypeOnNodesWithReturnMaxMethod2.addFirst(9999);
+        linkedListPrototypeOnNodesWithReturnMaxMethod2.addFirst(199);
+        linkedListPrototypeOnNodesWithReturnMaxMethod2.addFirst(1656464);
+        linkedListPrototypeOnNodesWithReturnMaxMethod2.addFirst(-999);
+        linkedListPrototypeOnNodesWithReturnMaxMethod2.removeFirst();
+        linkedListPrototypeOnNodesWithReturnMaxMethod2.removeFirst();
+        assertEquals(9999, linkedListPrototypeOnNodesWithReturnMaxMethod2.returnMax());
+
     }
 }

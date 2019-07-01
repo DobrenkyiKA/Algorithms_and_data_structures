@@ -1,10 +1,12 @@
 package hw03;
 
+import hw01.LinkedListPrototypeOnNodes;
+
 public class LinkedListPrototypeOnNodesWithReturnMaxMethod<T extends Comparable> {
 
     private Node firstNode;
 
-    private T maxValue;
+    private LinkedListPrototypeOnNodes<T> maxValue = new LinkedListPrototypeOnNodes<>();
 
     private int size = 0;
 
@@ -14,10 +16,10 @@ public class LinkedListPrototypeOnNodesWithReturnMaxMethod<T extends Comparable>
         node.currentElement = element;
         if (firstNode == null) {
             firstNode = node;
-            maxValue = element;
+            maxValue.addFirst(element);
         } else {
-            if (maxValue.compareTo(element) < 0) {
-                maxValue = element;
+            if (maxValue.head().compareTo(element) <= 0) {
+                maxValue.addFirst(element);
             }
             node.nextElement = firstNode;
             firstNode = node;
@@ -28,6 +30,9 @@ public class LinkedListPrototypeOnNodesWithReturnMaxMethod<T extends Comparable>
     public void removeFirst() {
         if (firstNode != null) {
             size--;
+            if (maxValue.head() == firstNode.currentElement) {
+                maxValue.removeFirst();
+            }
             if (firstNode.nextElement != null) {
                 firstNode = firstNode.nextElement;
                 firstNode.previousElement = null;
@@ -50,7 +55,7 @@ public class LinkedListPrototypeOnNodesWithReturnMaxMethod<T extends Comparable>
     }
 
     public T returnMax() {
-        return maxValue;
+        return maxValue.head();
     }
 
     class Node <T>{
